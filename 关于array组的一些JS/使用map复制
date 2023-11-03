@@ -1,0 +1,13 @@
+let numbers = [1,2,3,4,5];
+let squares= numbers.map(square);//这里是用一个叫square的把numbers抄袭了还平方了!
+squares.forEach(print);
+
+function square(element){
+    return Math.pow(element,2);
+
+}
+
+function print(element){
+    console.log(element);
+
+}

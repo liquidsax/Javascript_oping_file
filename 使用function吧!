@@ -1,0 +1,19 @@
+//这是一个洗牌js程序的演示
+let cards=['A','2','3','4','5','6','7','8','9','10','J','Q','K'];//定义一个卡组
+
+shuffle(cards);
+cards.forEach(card => console.log(card));//这里使用了=>箭头来定义函数，方便阅读
+
+function shuffle(array){
+    let currentIndex = array.length;
+    while( currentIndex != 0){
+        let randomIndex = Math.floor(Math.random()*array.length);//这里是一个随机索引,用于取随机位置上的卡片值
+        currentIndex-=1;
+
+        let temp=array[currentIndex];//引入一个temp用于进行两个值之间的交换,老套路了
+        array[currentIndex]=array[randomIndex];
+        array[randomIndex]=temp;
+    }
+
+    return array;
+}
